@@ -1,0 +1,51 @@
+@import "../../scss/variables";
+
+.badge {
+  display: flex;
+  align-items: center;
+  background-color: $primary-light;
+  color: $primary;
+  cursor: pointer;
+  border-radius: $border-radius;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  min-height: 26px;
+  transition: background-color 0.3s;
+  &:not(.badge-dark, .badge-clearable):hover {
+    background-color: $primary;
+    color: $primary-light;
+  }
+  &-green {
+    background-color: $primary;
+    color: $primary-light;
+  }
+  &-dark {
+    background-color: $primary-very-dark;
+    color: $primary-light;
+  }
+  &-rounded {
+    border-radius: 20px;
+  }
+
+  span {
+    padding: 4px 16px;
+  }
+  &-remove {
+    background-color: $primary;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    align-self: stretch;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $primary-very-dark;
+    }
+  }
+  &-clearable {
+    cursor: default;
+  }
+}

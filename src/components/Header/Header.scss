@@ -1,0 +1,10 @@
+@import "../../scss/variables";
+.header {
+  height: 150px;
+  background-color: $primary;
+  background-image: url(../../../public/bg-header-desktop.svg);
+  
+  @media (max-width: 768px) {
+    background-image: url(../../../public/bg-header-mobile.svg);
+  }
+}

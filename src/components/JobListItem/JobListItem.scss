@@ -1,0 +1,88 @@
+@import "../../scss/variables";
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+  -webkit-box-shadow: 0px 5px 11px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 11px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 11px 2px rgba(34, 60, 80, 0.2);
+  border-radius: $border-radius;
+
+  padding: 15px 30px;
+  background-color: $white;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 30px;
+  }
+  &:nth-child(1) {
+    border-radius: 5px;
+    box-shadow: 0px 5px 11px 2px rgba(34, 60, 80, 0.2);
+    border-left: 7px solid $primary;
+  }
+  &:nth-child(2) {
+    border-radius: 5px;
+    box-shadow: 0px 5px 11px 2px rgba(34, 60, 80, 0.2);
+    border-left: 7px solid $primary;
+  }
+  &__info {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    @media (max-width: 1023px) {
+      padding-bottom: 30px;
+      border-bottom: 1px solid black;
+    }
+  }
+  &__avatar {
+    img {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      position: absolute;
+      top: -110px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  &__company {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: $primary;
+    font-weight: $heading-500;
+  }
+  &__position {
+    color: $primary-very-dark;
+    font-weight: $heading-700;
+  }
+  &__details {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    &-item {
+      color: $primary-dark;
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -6px;
+        top: 6px;
+        width: 4px;
+        height: 4px;
+        background-color: $primary-dark;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__badge {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
