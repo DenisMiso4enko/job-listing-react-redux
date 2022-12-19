@@ -62,16 +62,16 @@
     font-weight: $heading-700;
   }
   &__details {
-    position: relative;
     display: flex;
     gap: 30px;
     &-item {
+      position: relative;
       color: $primary-dark;
       &:not(:last-child)::after {
         content: "";
         position: absolute;
-        right: -6px;
-        top: 6px;
+        top: 5px;
+        right: -16px;
         width: 4px;
         height: 4px;
         background-color: $primary-dark;
